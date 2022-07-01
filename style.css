@@ -175,6 +175,11 @@ select option {
         padding: 2em;
     }
 
+
+    select {
+        margin-top: 2em;
+    }
+
     .countries {
         /* padding: 2em; */
         justify-content: center;
