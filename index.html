@@ -17,7 +17,7 @@
   <body>
     <nav>
       <h1>Where in the world?</h1>
-      <button class="Dark"><i class="fa-regular fa-moon"></i> Dark Mode</button>
+      <button class="Dark" onclick="DarkMode()"><i class="fa-regular fa-moon"></i> Dark Mode</button>
     </nav>
     <div class="container">
       <div class="searcharea">
@@ -35,7 +35,7 @@
         <select name="region" id="region" required>
           <option value="" disabled selected hidden>Filter by Region</option>
           <option data-region="Africa" value="Africa">Africa</option>
-          <option data-region="America" value="America">America</option>
+          <option data-region="America" value="Americas">America</option>
           <option data-region="Asia" value="Asia">Asia</option>
           <option data-region="Europe" value="Europe">Europe</option>
           <option data-region="Oceania" value="Oceania">Oceania</option>
@@ -43,86 +43,9 @@
       </div>
       <div class="countries"></div>
     </div>
-
+<script src="script.js"></script>
     <script>
-      function GetCountries() {
-        try {
-          fetch("https://restcountries.com/v3.1/all")
-            .then((response) => {
-              if (response.ok) {
-                return response.json();
-              } else {
-                throw new Error("Something went wrong");
-              }
-            })
-            .then((data) => {
-              console.log(data);
-              for (var i = 0; i < data.length; i++) {
-                const CountriesContainer = document.querySelector(".countries");
-                const DisplayCountry = document.createElement("div");
-                DisplayCountry.setAttribute("data-region", data[i].region);
-                DisplayCountry.setAttribute("class", "DisplayCountry");
-                const CountryFlag = document.createElement("img");
-                CountryFlag.setAttribute("src", data[i].flags.png);
-                const CountryDetails = document.createElement("div");
-                CountryDetails.setAttribute("class", "CountryDetails");
-                const CountryName = document.createElement("h2");
-                CountryName.innerHTML = data[i].name.common;
-                const Paragraph1 = document.createElement("p");
-                const Title1 = document.createElement("span");
-                Title1.textContent = "Population : ";
-                Title1.setAttribute("class", "title");
-                const Population = document.createElement("span");
-                Population.textContent = data[i].population;
-                const Paragraph2 = document.createElement("p");
-                const Title2 = document.createElement("span");
-                Title2.textContent = "Region : ";
-                Title2.setAttribute("class", "title");
-                const Region = document.createElement("span");
-                Region.textContent = data[i].region;
-                const Paragraph3 = document.createElement("p");
-                const Title3 = document.createElement("span");
-                Title3.textContent = "Capital : ";
-                Title3.setAttribute("class", "title");
-                const Capital = document.createElement("span");
-                Capital.textContent = data[i].capital;
-
-                Paragraph1.append(Title1);
-                Paragraph1.append(Population);
-                Paragraph2.append(Title2);
-                Paragraph2.append(Region);
-                Paragraph3.append(Title3);
-                Paragraph3.append(Capital);
-                CountryDetails.append(CountryName);
-                CountryDetails.append(Paragraph1);
-                CountryDetails.append(Paragraph2);
-                CountryDetails.append(Paragraph3);
-                DisplayCountry.append(CountryFlag);
-                DisplayCountry.append(CountryDetails);
-                CountriesContainer.append(DisplayCountry);
-              }
-            })
-            .catch((error) => console.log(error));
-        } catch {}
-      }
-
-      GetCountries();
-
-      SelectDropdown = document.querySelector("select");
-
-      SelectDropdown.addEventListener("change", () => {
-        const RegionValue =
-          SelectDropdown.options[SelectDropdown.selectedIndex].value;
-        console.log(RegionValue);
-         
-        document.querySelectorAll(".DisplayCountry").forEach((div) => {
-          const Region = div.dataset.region;
-          div.style.display = "none";
-          if (Region === RegionValue) {
-            div.style.display = "block";
-          }
-        });
-      });
+    
     </script>
   </body>
 </html>

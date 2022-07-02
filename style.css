@@ -19,9 +19,19 @@ nav {
     background: white;
     box-shadow: 3px 3px 5px hsl(0, 0%, 52%);
     padding: 2em 5em;
+    color: hsl(200, 15%, 8%);
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+nav.dark, .search.dark, select.dark {
+    background: hsl(209, 23%, 22%);
+    color: hsl(0, 0%, 100%);
+}
+
+.search.dark i, .search.dark input {
+    color: white;
 }
 
 h1 {
@@ -36,6 +46,10 @@ h1 {
     font-family: Nunito Sans;
     border: none;
     background: transparent;
+}
+
+.Dark.dark {
+    color: hsl(0, 0%, 100%);
 }
 
 .container {
@@ -62,6 +76,7 @@ h1 {
     color: hsl(0, 0%, 52%);
     font-family: Nunito Sans;
     font-weight: 600;
+    background: transparent;
 }
 
 .searchicon  {
@@ -118,6 +133,12 @@ select option {
     width: 27em;
     height: 35em;
     background-color: white;
+    color: hsl(200, 15%, 8%);
+}
+
+.DisplayCountry.dark {
+    background: hsl(209, 23%, 22%);
+    color: hsl(0, 0%, 100%);
 }
 
 .DisplayCountry img {
@@ -133,20 +154,34 @@ select option {
     font-size: 1.6em;
     margin-bottom: 1em;
     font-weight: 800;
-    color: hsl(200, 15%, 8%);
+ 
 }
 
 .CountryDetails p {
     margin: .5em 0;
     font-size: 1.4em;
-    color: hsl(0, 0%, 52%);
+    color: hsl(0, 0%, 52%)  ;
     font-weight: 600;
 }
+
+/* .CountryDetails.dark > p {
+    color: red;
+} */
 
 .title {
     color: hsl(200, 15%, 8%);
    
 }
+
+.title.dark {
+    color: hsl(0, 0%, 100%);
+}
+
+body.dark {
+    background: hsl(207, 26%, 17%);
+}
+
+
 
 @media (max-width:1024px)  {
     .searcharea { 
