@@ -28,6 +28,7 @@ nav {
 nav.dark, .search.dark, select.dark {
     background: hsl(209, 23%, 22%);
     color: hsl(0, 0%, 100%);
+    box-shadow: 3px 3px 5px hsl(200, 15%, 8%);
 }
 
 .search.dark i, .search.dark input {
@@ -105,6 +106,7 @@ select {
     font-weight: 300;
     border-radius: .2em;
     color: hsl(200, 15%, 8%);
+    outline: none;
 }
 
 select option {
@@ -202,6 +204,15 @@ body.dark {
 }
 
 @media (max-width:600px) {
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .Dark {
+        width: 7em;
+    }
+
     nav {
         padding: 2em;
     }

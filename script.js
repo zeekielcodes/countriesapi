@@ -9,10 +9,10 @@ function GetCountries() {
           }
         })
         .then((data) => {
-          console.log(data);
           for (var i = 0; i < data.length; i++) {
             const CountriesContainer = document.querySelector(".countries");
             const DisplayCountry = document.createElement("div");
+            DisplayCountry.setAttribute("data-name", data[i].name.official)
             DisplayCountry.setAttribute("data-region", data[i].region);
             DisplayCountry.setAttribute("class", "DisplayCountry");
             const CountryFlag = document.createElement("img");
@@ -53,8 +53,6 @@ function GetCountries() {
             DisplayCountry.append(CountryFlag);
             DisplayCountry.append(CountryDetails);
             CountriesContainer.append(DisplayCountry);
-
-            Search();
           }
         })
         .catch((error) => {
@@ -86,18 +84,16 @@ function GetCountries() {
   document.querySelector("form").addEventListener("submit", Search);
 
   function Search() {
-    // const SearchedCountry = document.querySelector("input").value;
-    // const Country = GetCountrie;
-    // document.querySelectorAll(".DisplayCountry").forEach((div) => {
-      
-    //   div.style.display = "none";
-    //   e
+    const SearchedCountry = document.querySelector("input").value;
+    document.querySelectorAll(".DisplayCountry").forEach(div => {
+const Name = div.dataset.name;
+        div.style.display = "none";
+        
+        if(Name.match(SearchedCountry)) {
+            div.style.display = "block";
+        }
 
-      
-    //   if (SearchedCountry == Country) {
-    //     div.style.display = "block";
-    //   }
-    // });
+    })
   }
 
   function DarkMode() {
