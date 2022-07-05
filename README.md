@@ -8,7 +8,7 @@ This is my solution to the [REST Countries API with color theme switcher challen
 
 ### Links
 
-- Solution URL: [Check solution]()
+- Solution URL: [Check solution](https://www.frontendmentor.io/solutions/rest-countries-api-with-color-theme-switcher-T7eapwij-Z)
 - Live Site URL: [Visit live site](https://thefacecountriesapi.pages.dev)
 
 ### Built with

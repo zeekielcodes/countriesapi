@@ -17,6 +17,7 @@ function GetCountries() {
           DisplayCountry.setAttribute("class", "DisplayCountry");
           const CountryFlag = document.createElement("img");
           CountryFlag.setAttribute("src", data[i].flags.png);
+          CountryFlag.setAttribute("alt", data[i].name.official)
           const CountryDetails = document.createElement("div");
           CountryDetails.setAttribute("class", "CountryDetails");
           const CountryName = document.createElement("h2");
@@ -99,6 +100,7 @@ function ShowMore(NameOfCountry) {
          showContainer.setAttribute("class", "showContainer");
          const Flag = document.createElement("img");
          Flag.setAttribute("src", data[0].flags.png);
+         Flag.setAttribute("alt", data[0].name.official)
          const ExpandCountry = document.createElement("div");
          ExpandCountry.setAttribute("class", "ExpandCountry");
          const Name = document.createElement("h3");
