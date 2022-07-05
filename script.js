@@ -250,8 +250,10 @@ SelectDropdown.addEventListener("change", () => {
 });
 
 function Back() {
-   const Extended = document.querySelector(".ShowMore")
-   Extended.style.display = "none";
+   const Extended = document.querySelectorAll(".ShowMore").forEach(div => {
+    div.style.display = "none"
+   })
+  //  Extended.style.display = "none";
 
    const NormalContainer = (document.querySelector(".container"));
    NormalContainer.style.display = "block"

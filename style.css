@@ -31,7 +31,7 @@ nav.dark, body.dark .search, body.dark select {
     box-shadow: 3px 3px 5px hsl(200, 15%, 8%);
 }
 
-.search.dark i, .search.dark input {
+.dark .search i, .dark .search input {
     color: white;
 }
 
@@ -161,6 +161,7 @@ body.dark .DisplayCountry {
 }
 
 .CountryDetails p {
+    width: 100%;
     margin: .5em 0;
     font-size: 1.4em;
     color: hsl(0, 0%, 52%)  ;
@@ -334,4 +335,10 @@ body.dark .ShowMore button, body.dark .country {
     }
 
 
+}
+
+@media (max-width:400px) {
+    .showContainer img {
+        height: 25em;
+    }
 }
