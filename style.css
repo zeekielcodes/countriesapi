@@ -250,6 +250,7 @@ body.dark .ShowMore button, body.dark .country {
 .h4 {
     line-height: 2.5;
     margin-top: 2.5em;
+    width: 100%;
 }
 
 .details {

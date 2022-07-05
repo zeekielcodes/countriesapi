@@ -163,7 +163,7 @@ function ShowMore(NameOfCountry) {
          Currencies.append(Currency)
          const currency = data[0].currencies;
          for (const property in currency) {
-            Currencies.append(currency[property] + ", ")
+            Currencies.append(JSON.stringify(currency))
          }
 
          const Languages = document.createElement("p")
