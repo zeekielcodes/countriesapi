@@ -163,10 +163,11 @@ function ShowMore(NameOfCountry) {
          Currency.setAttribute("class", "title");
          Currency.textContent = "Currencies : "
          Currencies.append(Currency)
-         const currency = data[0].currencies;
-         for (const property in currency) {
-            Currencies.append(JSON.stringify(currency))
-         }
+         const currency = Object.keys(data[0].currencies);
+         Currencies.append(currency)
+        //  for (const property in currency) {
+        //     Currencies.append(JSON.stringify(currency))
+        //  }
 
          const Languages = document.createElement("p")
          const language = document.createElement("span")
@@ -184,7 +185,7 @@ function ShowMore(NameOfCountry) {
          Border.setAttribute("class", "title")
          Border.textContent = "Border Countries : "
          Borders.append(Border)
-         const borderCountry = data[0].borders;
+         const borderCountry =  data[0].borders;
        
          for (var i=0; i<borderCountry.length; i++) {
             const EachBorder = document.createElement("span");
