@@ -207,14 +207,15 @@ body.dark .ShowMore button, body.dark .country {
     box-shadow: 3px 3px 5px hsl(0, 0%, 52%);;
 }
 
-.country {
+button.country {
     font-family: Nunito Sans;
     font-weight: 600;
     background: hsl(0, 0%, 98%);
     border: none;
     box-shadow: 3px 3px 5px hsl(0, 0%, 52%);
-    padding: .5em 1em;
-    margin: 0 .5em;
+    padding: .5em;
+    margin: .5em;
+    margin-bottom: unset;
 }
 
 .showContainer {
@@ -248,7 +249,7 @@ body.dark .ShowMore button, body.dark .country {
 }
 
 .h4 {
-    line-height: 2.5;
+    line-height: 1;
     margin-top: 2.5em;
     width: 100%;
 }

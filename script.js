@@ -188,9 +188,9 @@ function ShowMore(NameOfCountry) {
          const borderCountry =  data[0].borders;
        
          for (var i=0; i<borderCountry.length; i++) {
-            const EachBorder = document.createElement("span");
+            const EachBorder = document.createElement("button");
             EachBorder.setAttribute("class", "country");
-            EachBorder.textContent = borderCountry[i];
+            EachBorder.innerHTML = borderCountry[i];
             Borders.append(EachBorder)
          }
   
