@@ -12,7 +12,7 @@ function GetCountries() {
         for (var i = 0; i < data.length; i++) {
           const CountriesContainer = document.querySelector(".countries");
           const DisplayCountry = document.createElement("div");
-          DisplayCountry.setAttribute("data-name", data[i].name.official);
+          DisplayCountry.setAttribute("data-name", data[i].name.common);
           DisplayCountry.setAttribute("data-region", data[i].region);
           DisplayCountry.setAttribute("class", "DisplayCountry");
           const CountryFlag = document.createElement("img");
@@ -260,7 +260,7 @@ function Back() {
    
 }
 
-document.querySelector("form").addEventListener("submit", Search);
+document.querySelector("input").addEventListener("keyup", Search);
 
 function Search() {
   const SearchedCountry = document.querySelector("input").value.toUpperCase();
